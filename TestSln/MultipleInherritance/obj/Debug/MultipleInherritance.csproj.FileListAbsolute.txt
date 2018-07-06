@@ -1,0 +1,7 @@
+C:\WorkSoukromy\TestSln\MultipleInherritance\bin\Debug\MultipleInherritance.exe.config
+C:\WorkSoukromy\TestSln\MultipleInherritance\bin\Debug\MultipleInherritance.exe
+C:\WorkSoukromy\TestSln\MultipleInherritance\bin\Debug\MultipleInherritance.pdb
+C:\WorkSoukromy\TestSln\MultipleInherritance\obj\Debug\MultipleInherritance.csprojAssemblyReference.cache
+C:\WorkSoukromy\TestSln\MultipleInherritance\obj\Debug\MultipleInherritance.csproj.CoreCompileInputs.cache
+C:\WorkSoukromy\TestSln\MultipleInherritance\obj\Debug\MultipleInherritance.exe
+C:\WorkSoukromy\TestSln\MultipleInherritance\obj\Debug\MultipleInherritance.pdb
