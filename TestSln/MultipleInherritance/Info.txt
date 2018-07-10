@@ -1,1 +1,3 @@
 ﻿https://www.codeproject.com/Articles/10072/Simulated-Multiple-Inheritance-Pattern-for-C
+
+pokusna zprava pro grid
