@@ -1,6 +1,6 @@
 ﻿https://www.codeproject.com/Articles/30381/Introduction-to-Mocking
 
-
+AAA
 
 
 NOTE ohldne mock
