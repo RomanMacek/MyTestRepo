@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banka.cs" />
+    <Compile Include="BlaBlaBla.cs" />
+    <Compile Include="IBlaBlaBla.cs" />
     <Compile Include="IWebovaSluzba.cs" />
     <Compile Include="MyMath.cs" />
     <Compile Include="Program.cs" />

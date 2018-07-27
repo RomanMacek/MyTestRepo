@@ -5,5 +5,5 @@ NOTE ohldne mock
 https://stackoverflow.com/questions/336288/how-can-i-use-mock-objects-in-my-unit-tests-and-still-use-code-coverage
 https://www.c-sharpcorner.com/UploadFile/dacca2/fundamental-of-unit-testing-understand-mock-object-in-unit/
 
-
-dd
+mock & callback
+https://www.codeproject.com/Articles/829232/moq-Callback-The-Unknown
