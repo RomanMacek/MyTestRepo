@@ -1,7 +1,5 @@
 ﻿https://www.codeproject.com/Articles/30381/Introduction-to-Mocking
 
-AAA
-bb
 
 NOTE ohldne mock
 https://stackoverflow.com/questions/336288/how-can-i-use-mock-objects-in-my-unit-tests-and-still-use-code-coverage
