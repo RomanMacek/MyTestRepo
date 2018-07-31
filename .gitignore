@@ -29,3 +29,8 @@ NUnitTestSln/PodkladovaData/obj/
 NUnitTestSln/.vs/
 TestSln/.vs/
 NUnitTestSln/PodkladovaData.Test/.vs/
+Soap/WebApiSln/.vs/
+Soap/WebApiSln/packages/
+Soap/WebApiSln/ProductsApp.Tests/obj/
+Soap/WebApiSln/ProductsApp/bin/
+Soap/WebApiSln/ProductsApp/obj/
