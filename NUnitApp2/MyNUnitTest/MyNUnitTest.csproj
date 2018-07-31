@@ -60,8 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankaTest.cs" />
+    <Compile Include="NUnit03_CallbackVerific.cs" />
     <Compile Include="NUnitTest1.cs" />
     <Compile Include="NUnitTest2.cs" />
+    <Compile Include="NUnit_Sample_02.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

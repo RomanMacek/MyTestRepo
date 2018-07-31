@@ -7,3 +7,6 @@ https://www.c-sharpcorner.com/UploadFile/dacca2/fundamental-of-unit-testing-unde
 
 mock & callback
 https://www.codeproject.com/Articles/829232/moq-Callback-The-Unknown
+
+Plneni property na mocku + events atd
+https://github.com/Moq/moq4/wiki/Quickstart
