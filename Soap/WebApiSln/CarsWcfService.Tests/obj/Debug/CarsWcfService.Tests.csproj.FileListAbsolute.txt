@@ -1,0 +1,2 @@
+C:\WorkSoukromy\Soap\WebApiSln\CarsWcfService.Tests\obj\Debug\CarsWcfService.Tests.csprojAssemblyReference.cache
+C:\WorkSoukromy\Soap\WebApiSln\CarsWcfService.Tests\obj\Debug\CarsWcfService.Tests.csproj.CoreCompileInputs.cache

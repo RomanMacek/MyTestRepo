@@ -1,0 +1,7 @@
+C:\WorkSoukromy\Soap\WebApiSln\CarsWcfService\bin\CarsWcfService.dll.config
+C:\WorkSoukromy\Soap\WebApiSln\CarsWcfService\bin\CarsWcfService.dll
+C:\WorkSoukromy\Soap\WebApiSln\CarsWcfService\bin\CarsWcfService.pdb
+C:\WorkSoukromy\Soap\WebApiSln\CarsWcfService\obj\Debug\CarsWcfService.csprojAssemblyReference.cache
+C:\WorkSoukromy\Soap\WebApiSln\CarsWcfService\obj\Debug\CarsWcfService.csproj.CoreCompileInputs.cache
+C:\WorkSoukromy\Soap\WebApiSln\CarsWcfService\obj\Debug\CarsWcfService.dll
+C:\WorkSoukromy\Soap\WebApiSln\CarsWcfService\obj\Debug\CarsWcfService.pdb

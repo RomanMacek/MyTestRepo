@@ -1,2 +1,15 @@
 Zdrojove URL
 https://docs.microsoft.com/cs-cz/aspnet/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
+
+
+SOAP UI
+http://test.swtestovani.cz/index.php?option=com_content&view=article&id=50:soapui-prakticky-workspace-a-struny-uvod-do-testovani&catid=14:testovaci-nastroje&Itemid=31
+http://test.swtestovani.cz/index.php?option=com_content&view=article&id=51:soapui-prakticky-i-zaklady-testovani-projektu&catid=14:testovaci-nastroje&Itemid=31
+http://test.swtestovani.cz/index.php?option=com_content&view=category&layout=blog&id=14&Itemid=31
+
+
+Ukoly
+ - vytvorid wsdl z WebApi
+	https://www.google.cz/search?ei=WBpgW-HkPNLZwAKJ1IrABw&q=c%23+create+wsdl+from+web+api&oq=c%23+create+wsdl+from+web+api&gs_l=psy-ab.3...6709610.6713754.0.6714160.10.10.0.0.0.0.121.874.7j3.10.0....0...1c.1.64.psy-ab..1.2.202...0i7i30i19k1j0i19k1j0i30i19k1j0i8i30i19k1j0i8i7i30k1j0i8i13i30k1.0.rYG2J28wN4Q
+
+
