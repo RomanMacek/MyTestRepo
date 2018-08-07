@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using MyRestService.Business;
+using MyRestService.Business.Interfaces;
+using MyRestService.Repository;
+using MyRestService.Repository.Interfaces;
+using Unity;
+using Unity.Lifetime;
 
 namespace MyRestService
 {
@@ -10,6 +16,10 @@ namespace MyRestService
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            var container = new UnityContainer();
+            container.RegisterType<IUserRepository, UserRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IUserBusiness, UserBusiness>(new HierarchicalLifetimeManager());
+
 
             // Web API routes
             config.MapHttpAttributeRoutes();

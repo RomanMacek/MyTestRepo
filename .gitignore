@@ -36,3 +36,7 @@ Soap/WebApiSln/ProductsApp/bin/
 Soap/WebApiSln/ProductsApp/obj/
 Soap/WebApiSln/MyRestService/bin/
 Soap/WebApiSln/MyRestService/obj/
+Soap/WebApiSln/MyRestService.Repository/obj/
+Soap/WebApiSln/MyRestService.Business/obj/
+Soap/WebApiSln/MyRestService.Business.Interfaces/obj/
+Soap/WebApiSln/MyRestService.Repository.Interfaces/obj/

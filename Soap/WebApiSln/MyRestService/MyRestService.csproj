@@ -304,6 +304,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyRestService.Repository.Interfaces\MyRestService.Repository.Interfaces.csproj">
+      <Project>{C499FD77-840A-41BE-9415-0D355AE6EB95}</Project>
+      <Name>MyRestService.Repository.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyRestService.Repository\MyRestService.Repository.csproj">
+      <Project>{4CF201CE-1CE8-4947-A8FF-68358EDBEF1D}</Project>
+      <Name>MyRestService.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
