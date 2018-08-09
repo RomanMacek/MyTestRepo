@@ -8,6 +8,7 @@ using MyRestService.Repository;
 using MyRestService.Repository.Interfaces;
 using Unity;
 using Unity.Lifetime;
+using Unity.WebApi;
 
 namespace MyRestService
 {
@@ -19,6 +20,7 @@ namespace MyRestService
             var container = new UnityContainer();
             container.RegisterType<IUserRepository, UserRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IUserBusiness, UserBusiness>(new HierarchicalLifetimeManager());
+            config.DependencyResolver = new UnityDependencyResolver(container);
 
 
             // Web API routes
@@ -30,5 +32,6 @@ namespace MyRestService
                 defaults: new { id = RouteParameter.Optional }
             );
         }
+
     }
 }

@@ -4,6 +4,9 @@ namespace MyRestService.Repository
 {
     public class UserRepository : IUserRepository
     {
-        
+        public UserRepository()
+        {
+            
+        }
     }
 }

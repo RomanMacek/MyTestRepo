@@ -40,3 +40,13 @@ Soap/WebApiSln/MyRestService.Repository/obj/
 Soap/WebApiSln/MyRestService.Business/obj/
 Soap/WebApiSln/MyRestService.Business.Interfaces/obj/
 Soap/WebApiSln/MyRestService.Repository.Interfaces/obj/
+Soap/WebApiSln/CarsWcfService.Tests/bin/
+Soap/WebApiSln/CarsWcfService.Tests/obj/
+Soap/WebApiSln/MyRestService.Business.Interfaces/bin/
+Soap/WebApiSln/MyRestService.Business/bin/
+Soap/WebApiSln/MyRestService.Entities/bin/
+Soap/WebApiSln/MyRestService.Entities/obj/
+Soap/WebApiSln/MyRestService.Repository.Interfaces/bin/
+Soap/WebApiSln/MyRestService.Repository/bin/
+Soap/WebApiSln/MyRestService.Tests/bin/
+Soap/WebApiSln/MyRestService.Tests/obj/

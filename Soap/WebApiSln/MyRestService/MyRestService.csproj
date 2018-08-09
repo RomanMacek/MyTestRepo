@@ -305,6 +305,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyRestService.Business.Interfaces\MyRestService.Business.Interfaces.csproj">
+      <Project>{E9FAD13C-D1E1-4988-A0F1-856261A77D49}</Project>
+      <Name>MyRestService.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyRestService.Business\MyRestService.Business.csproj">
+      <Project>{8FDCF67F-6A73-4987-B1AD-6A4AF2E66C5B}</Project>
+      <Name>MyRestService.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyRestService.Repository.Interfaces\MyRestService.Repository.Interfaces.csproj">
       <Project>{C499FD77-840A-41BE-9415-0D355AE6EB95}</Project>
       <Name>MyRestService.Repository.Interfaces</Name>
