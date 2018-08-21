@@ -50,3 +50,6 @@ Soap/WebApiSln/MyRestService.Repository.Interfaces/bin/
 Soap/WebApiSln/MyRestService.Repository/bin/
 Soap/WebApiSln/MyRestService.Tests/bin/
 Soap/WebApiSln/MyRestService.Tests/obj/
+ODataSolution/.vs/
+ODataSolution/BookStore/bin/
+ODataSolution/BookStore/obj/
