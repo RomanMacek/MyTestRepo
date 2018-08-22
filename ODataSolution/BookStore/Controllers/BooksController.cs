@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using BookStore.Models;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace BookStore.Controllers
 {
@@ -13,9 +14,12 @@ namespace BookStore.Controllers
     public class BooksController : ODataController
     {
         private BookStoreContext _db;
+        private readonly ILogger<BooksController> _logger;
 
-        public BooksController(BookStoreContext context)
+        public BooksController(ILogger<BooksController> logger, BookStoreContext context)
         {
+            _logger = logger;
+
             _db = context;
             if (context.Books.Count() == 0)
             {
@@ -31,6 +35,7 @@ namespace BookStore.Controllers
         [EnableQuery]
         public IActionResult Get()
         {
+            _logger.LogInformation("Calling BooksController method GET()");
             return Ok(_db.Books);
         }
 

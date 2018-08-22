@@ -21,7 +21,7 @@ namespace BookStore
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;         
+            Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -44,6 +44,10 @@ namespace BookStore
             {
                 app.UseDeveloperExceptionPage();
             }
+            //else
+            //{
+            //    app.UseExceptionHandler("/Home/Error"); // pravdepodobne presmeruje na tuto stranku pri error
+            //}
 
             //app.UseMvc();
 

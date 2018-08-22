@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +15,26 @@ namespace BookStore
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                             //  .ConfigureLogging(builder => builder.AddFile())
+                             //.ConfigureLogging((context, builder) =>
+                             //      {
+                             //          builder.AddFile(opts =>
+                             //          {
+                             //              context.Configuration.GetSection("FileLoggingOptions").Bind(opts);
+
+                             //          });
+                             //      })
+                             //.ConfigureLogging(builder => builder.AddFile(opts =>
+                             //{
+                //    opts.FileName = "app-logs-";
+                //    opts.FileSizeLimit = 1024 * 1024;
+
+                //}))
+                .ConfigureLogging(builder => builder.AddFile(options => {
+                    options.FileName = "diagnostics-"; // The log file prefixes
+                    options.LogDirectory = "LogFiles"; // The directory to write the logs
+                    options.FileSizeLimit = 20 * 1024 * 1024; // The maximum log file size (20MB here)
+                }))
                 .UseStartup<Startup>();
     }
 }

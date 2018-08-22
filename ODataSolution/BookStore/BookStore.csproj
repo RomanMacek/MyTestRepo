@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Logger\FileLoggerFactoryExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logger\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -12,6 +17,8 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.OData" Version="7.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+    <PackageReference Include="NetEscapades.Extensions.Logging.RollingFile" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,24 @@
+2018-08-22 09:47:11.596 +02:00 [Information] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: User profile is available. Using 'C:\Users\RomanMacek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-08-22 09:47:13.290 +02:00 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 DEBUG http://localhost:3316/  0
+2018-08-22 09:47:13.292 +02:00 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:3316/api/values  
+2018-08-22 09:47:13.310 +02:00 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 17.2524ms 200 
+2018-08-22 09:47:13.393 +02:00 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 94.384ms 404 
+2018-08-22 09:47:20.818 +02:00 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:3316/odata/books  
+2018-08-22 09:47:20.914 +02:00 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Route matched with {action = "Get", controller = "Books"}. Executing action BookStore.Controllers.BooksController.Get (BookStore)
+2018-08-22 09:47:21.100 +02:00 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'BookStoreContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=BookLists 
+2018-08-22 09:47:21.251 +02:00 [Information] Microsoft.EntityFrameworkCore.Update: Saved 6 entities to in-memory store.
+2018-08-22 09:47:21.333 +02:00 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method BookStore.Controllers.BooksController.Get (BookStore) - Validation state: Valid
+2018-08-22 09:47:23.442 +02:00 [Information] BookStore.Controllers.BooksController: Calling BooksController method GET()
+2018-08-22 09:47:23.447 +02:00 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action method BookStore.Controllers.BooksController.Get (BookStore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2109.631ms.
+2018-08-22 09:47:23.504 +02:00 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor: Executing ObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[BookStore.Models.Book, BookStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-08-22 09:47:23.888 +02:00 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action BookStore.Controllers.BooksController.Get (BookStore) in 2969.8751ms
+2018-08-22 09:47:23.893 +02:00 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 3074.0772ms 200 application/json; odata.metadata=minimal; odata.streaming=true; charset=utf-8
+2018-08-22 09:47:26.689 +02:00 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request starting HTTP/1.1 GET http://localhost:3316/odata/books  
+2018-08-22 09:47:26.692 +02:00 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Route matched with {action = "Get", controller = "Books"}. Executing action BookStore.Controllers.BooksController.Get (BookStore)
+2018-08-22 09:47:26.704 +02:00 [Information] Microsoft.EntityFrameworkCore.Infrastructure: Entity Framework Core 2.1.1-rtm-30846 initialized 'BookStoreContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=BookLists 
+2018-08-22 09:47:26.730 +02:00 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executing action method BookStore.Controllers.BooksController.Get (BookStore) - Validation state: Valid
+2018-08-22 09:47:27.561 +02:00 [Information] BookStore.Controllers.BooksController: Calling BooksController method GET()
+2018-08-22 09:47:27.563 +02:00 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action method BookStore.Controllers.BooksController.Get (BookStore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 830.5933ms.
+2018-08-22 09:47:27.566 +02:00 [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor: Executing ObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[BookStore.Models.Book, BookStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-08-22 09:47:27.582 +02:00 [Information] Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker: Executed action BookStore.Controllers.BooksController.Get (BookStore) in 888.1943ms
+2018-08-22 09:47:27.589 +02:00 [Information] Microsoft.AspNetCore.Hosting.Internal.WebHost: Request finished in 895.3542ms 200 application/json; odata.metadata=minimal; odata.streaming=true; charset=utf-8
