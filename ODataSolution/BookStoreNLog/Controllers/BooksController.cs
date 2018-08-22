@@ -36,6 +36,11 @@ namespace BookStore.Controllers
         public IActionResult Get()
         {
             _logger.LogInformation("Calling BooksController method GET()");
+            _logger.LogError("uaaaaaa");
+            _logger.LogCritical("criticaaaal");
+            _logger.LogDebug("debuuug");
+            _logger.LogTrace("traceeeeee");
+            _logger.LogWarning("warniiiing");
             return Ok(_db.Books);
         }
 
