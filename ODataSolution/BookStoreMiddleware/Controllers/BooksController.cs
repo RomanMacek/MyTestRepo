@@ -29,7 +29,8 @@ namespace BookStoreMiddleware.Controllers
         [EnableQuery]
         public IActionResult Get()
         {
-            return Ok(_db.Books);
+            var result = _db.Books;
+            return Ok(result);
         }
 
         [EnableQuery]
