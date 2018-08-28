@@ -14,18 +14,17 @@ namespace BookStoreMiddleware.Contexts
         {
             public DbSet<Contact> Contacts { get; set; }
 
+            public ContactsContext() { }
+
             public ContactsContext(DbContextOptions<ContactsContext> options) : base(options)
             {
-
             }
 
-            //       public ContactsContext() { }
-
-            protected override void OnModelCreating(ModelBuilder modelBuilder)
-            {
-                //modelBuilder.Entity<Contacts>().OwnsOne(c => c.Id);
-                modelBuilder.Entity<Contact>().HasIndex(c => c.Id);
-            }
+            //protected override void OnModelCreating(ModelBuilder modelBuilder)
+            //{
+            //    //modelBuilder.Entity<Contacts>().OwnsOne(c => c.Id);
+            //    modelBuilder.Entity<Contact>().HasIndex(c => c.Id);
+            //}
         }
     }
 }

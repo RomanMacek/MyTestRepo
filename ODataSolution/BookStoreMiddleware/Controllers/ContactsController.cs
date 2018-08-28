@@ -14,38 +14,46 @@ using Microsoft.EntityFrameworkCore.Internal;
 
 namespace BookStoreMiddleware.Controllers
 {
-    //[Route("api/[controller]")]
-    //[ApiController]
+    [Route("api/[controller]")]
+    [ApiController]
     public class ContactsController : ODataController
     {
         public IContactsRepository ContactsRepo { get; set; }
 
-        //public ContactsController(IContactsRepository _repo)
-        //{
-        //    ContactsRepo = _repo;
-        //}
-
-        private ContactsContextMem _db;
-        public ContactsController(ContactsContextMem context)
+        public ContactsController(IContactsRepository _repo)
         {
-            _db = context;
-            var item1 = new Contact()
-            {
-                Id = 1,
-                Company = "AAAA",
-                FirstName = "BBBB",
-                LastName = "CCCC"
-            };
-
-            context.Contacts.Add(item1);
-            context.SaveChanges();
+            ContactsRepo = _repo;
         }
 
-        [EnableQuery]
+        private ContactsContextMem _dbMem;
+        private ContactsContextDb.ContactsContext _db;
+
+        //public ContactsController(ContactsContextDb.ContactsContext context)
+        //{
+        //    _db = context;
+        //}
+
+        //public ContactsController(ContactsContextMem context)
+        //{
+        //    _dbMem = context;
+        //    var item1 = new Contact()
+        //    {
+        //        Id = 1,
+        //        Company = "AAAA",
+        //        FirstName = "BBBB",
+        //        LastName = "CCCC"
+        //    };
+
+        //    context.Contacts.Add(item1);
+        //    context.SaveChanges();
+        //}
+
+        //[EnableQuery]
         public IActionResult Get() //public async Task<IActionResult> Get()
         {
             //var contactList = await ContactsRepo.GetAll();
-            var contactList = _db.Contacts;
+            //var contactList = _dbMem.Contacts;
+            var contactList = ContactsRepo.GetAllBase();
             return Ok(contactList);
         }
 

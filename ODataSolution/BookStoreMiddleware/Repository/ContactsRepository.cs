@@ -13,15 +13,15 @@ namespace BookStoreMiddleware.Repository
     {
         ContactsContextDb.ContactsContext _context;
 
-        public ContactsRepository()
-        {
-
-        }
-
-        //public ContactsRepository(ContactsContextDb.ContactsContext context)
+        //public ContactsRepository()
         //{
-        //    _context = context;
+
         //}
+
+        public ContactsRepository(ContactsContextDb.ContactsContext context)
+        {
+            _context = context;
+        }
 
         public async Task Add(Contact item)
         {
@@ -29,8 +29,15 @@ namespace BookStoreMiddleware.Repository
             await _context.SaveChangesAsync();
         }
 
+
+        public IEnumerable<Contact> GetAllBase()
+        {      
+            var result = _context.Contacts.ToList();
+            return result;
+        }
         public async Task<IEnumerable<Contact>> GetAll()
         {
+            var result = _context.Contacts.ToListAsync();
             return await _context.Contacts.ToListAsync();
         }
 

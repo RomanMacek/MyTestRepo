@@ -10,6 +10,7 @@ namespace BookStoreMiddleware.Interface
     public interface IContactsRepository
     {
         Task Add(Contact item);
+        IEnumerable<Contact> GetAllBase();
         Task<IEnumerable<Contact>> GetAll();
         Task<Contact> Find(string key);
         Task Remove(string Id);

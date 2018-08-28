@@ -14,8 +14,8 @@ namespace BookStoreMiddleware.Models
         public string Company { get; set; }
         public string JobTitle { get; set; }
         public string Email { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public DateTime AnniversaryDate { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public DateTime? AnniversaryDate { get; set; }
         public string MobilePhone { get; set; }
     }
 }

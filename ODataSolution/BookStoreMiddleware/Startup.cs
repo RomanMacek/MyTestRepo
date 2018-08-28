@@ -40,11 +40,11 @@ namespace BookStoreMiddleware
             services.AddOData();  // ASP.NET Core OData vyžaduje některé služby registrované vpřed, aby poskytly své funkce. 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddDbContext<ContactsContextDb.ContactsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             //services.AddSingleton<IContactsRepository, ContactsRepository>();
-            //   services.AddTransient<IContactsRepository, ContactsRepository>();
-            
-            //services.AddDbContext<ContactsContextMem>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDbContext<ContactsContextMem>(opt => opt.UseInMemoryDatabase("ContactsLists"));
+            services.AddTransient<IContactsRepository, ContactsRepository>();
+
+            //services.AddDbContext<ContactsContextMem>(opt => opt.UseInMemoryDatabase("ContactsLists"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,7 +71,7 @@ namespace BookStoreMiddleware
             {
                 b.Select().Expand().Filter().OrderBy().MaxTop(100).Count();  //Přidání následujícího řádku kódu do Startup.cs umožňuje všechny možnosti dotazu OData, například $ filter, $ orderby, $ expand, atd.
                 b.MapODataServiceRoute("odata", "odata", GetEdmModel());
-                b.MapODataServiceRoute("contact", "contact", GetEdmModelContacts());
+                //b.MapODataServiceRoute("contact", "contact", GetEdmModelContacts());
             });
         }
 
