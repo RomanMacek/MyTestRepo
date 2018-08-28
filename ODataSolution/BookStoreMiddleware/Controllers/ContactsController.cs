@@ -7,6 +7,8 @@ using BookStoreMiddleware.Interface;
 using BookStoreMiddleware.Models;
 using BookStoreMiddleware.Repository;
 using Microsoft.AspNet.OData;
+using Microsoft.AspNet.OData.Query;
+using Microsoft.AspNet.OData.Routing;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -49,24 +51,26 @@ namespace BookStoreMiddleware.Controllers
         //}
 
         [EnableQuery]
-        public IActionResult Get() //public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get() //public async Task<IActionResult> Get()
         {
-            //var contactList = await ContactsRepo.GetAll();
+            var contactList = await ContactsRepo.GetAll();
             //var contactList = _dbMem.Contacts;
-            var contactList = ContactsRepo.GetAllBase();
+            //var contactList = ContactsRepo.GetAllBase();
             return Ok(contactList);
         }
 
-        //[HttpGet("{id}", Name = "GetContacts")]
-        //public async Task<IActionResult> GetById(string id)
-        //{
-        //    var item = await ContactsRepo.Find(id);
-        //    if (item == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(item);
-        //}
+        [HttpGet]
+        [EnableQuery(AllowedFunctions = AllowedFunctions.All, AllowedQueryOptions = AllowedQueryOptions.All)]
+        public async Task<IActionResult> Get([FromODataUri] int key)  // /contacts/contacts(1)
+        {
+            var item = await ContactsRepo.Find(key);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return Ok(item);
+        }
+
 
         //[HttpPost]
         //public async Task<IActionResult> Create([FromBody] Contact item)

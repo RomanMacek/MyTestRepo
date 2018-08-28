@@ -60,10 +60,10 @@ namespace BookStoreMiddleware.Repository
             }
         }
 
-        public async Task<Contact> Find(string key)
+        public async Task<Contact> Find(int key)
         {
             return await _context.Contacts
-                .Where(e => e.MobilePhone.Equals(key))
+                .Where(e => e.Id.Equals(key))
                 .SingleOrDefaultAsync();
         }
 

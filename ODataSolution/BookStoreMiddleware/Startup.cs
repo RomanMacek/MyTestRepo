@@ -71,9 +71,13 @@ namespace BookStoreMiddleware
             {
                 b.Select().Expand().Filter().OrderBy().MaxTop(100).Count();  //Přidání následujícího řádku kódu do Startup.cs umožňuje všechny možnosti dotazu OData, například $ filter, $ orderby, $ expand, atd.
                 b.MapODataServiceRoute("odata", "odata", GetEdmModel());
+                //b.MapODataServiceRoute("contacts", "contacts", GetEdmModelContacts());
+
+
                 b.MapODataServiceRoute("contacts", "contacts", GetEdmModelContacts());
+                //b.MapODataServiceRoute("contacts/ById", "contacts/ById", GetEdmModelContacts());
                 //b.MapODataServiceRoute("api/[controller]", "contacts", GetEdmModelContacts());
-                
+
             });
         }
 
@@ -85,10 +89,24 @@ namespace BookStoreMiddleware
             return builder.GetEdmModel();
         }
 
+        //private static IEdmModel GetEdmModelContacts()
+        //{
+        //    ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+        //    FunctionConfiguration function = builder.EntityType<Contact>().Collection.Function("ById");
+        //    function.Parameter<string>("Id");
+        //    function.Parameter<string>("type");
+        //    function.Parameter<string>("isAutoCompSearch");
+        //    function.ReturnsCollectionFromEntitySet<Contacts("SampleData");
+        //}
+
         private static IEdmModel GetEdmModelContacts()
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Contact>("Contacts");
+
+
+          //  builder.EntityType<Contact>().Collection.Function("ById").Returns<IActionResult>();
+
             return builder.GetEdmModel();
         }
     }

@@ -12,7 +12,7 @@ namespace BookStoreMiddleware.Interface
         Task Add(Contact item);
         IEnumerable<Contact> GetAllBase();
         Task<IEnumerable<Contact>> GetAll();
-        Task<Contact> Find(string key);
+        Task<Contact> Find(int key);
         Task Remove(string Id);
         Task Update(Contact item);
 
