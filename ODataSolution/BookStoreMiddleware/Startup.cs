@@ -71,7 +71,9 @@ namespace BookStoreMiddleware
             {
                 b.Select().Expand().Filter().OrderBy().MaxTop(100).Count();  //Přidání následujícího řádku kódu do Startup.cs umožňuje všechny možnosti dotazu OData, například $ filter, $ orderby, $ expand, atd.
                 b.MapODataServiceRoute("odata", "odata", GetEdmModel());
-                //b.MapODataServiceRoute("contact", "contact", GetEdmModelContacts());
+                b.MapODataServiceRoute("contacts", "contacts", GetEdmModelContacts());
+                //b.MapODataServiceRoute("api/[controller]", "contacts", GetEdmModelContacts());
+                
             });
         }
 

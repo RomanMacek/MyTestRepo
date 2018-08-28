@@ -14,8 +14,8 @@ using Microsoft.EntityFrameworkCore.Internal;
 
 namespace BookStoreMiddleware.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+  //  [Route("api/[controller]")]
+  //      [ApiController]
     public class ContactsController : ODataController
     {
         public IContactsRepository ContactsRepo { get; set; }
@@ -48,7 +48,7 @@ namespace BookStoreMiddleware.Controllers
         //    context.SaveChanges();
         //}
 
-        //[EnableQuery]
+        [EnableQuery]
         public IActionResult Get() //public async Task<IActionResult> Get()
         {
             //var contactList = await ContactsRepo.GetAll();
