@@ -112,6 +112,9 @@ namespace BookStoreMiddleware
             builder.Namespace = "ContactsService";
             builder.EntityType<Contact>().Collection.Function("DejmiCustById").Returns<string>();
 
+            // "Unbound Function" muze byt v jakymkoli controlleru a ne jen v controlleru Contacts => je dobre "Unbound Function" pouzivat ??
+            builder.Function("DejmiCustByIdSParametrem").Returns<string>().Parameter<int>("NejakeId");
+
           //  builder.EntityType<Contact>().Collection.Function("ById").Returns<IActionResult>();
 
             return builder.GetEdmModel();

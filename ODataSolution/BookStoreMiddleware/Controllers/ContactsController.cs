@@ -83,8 +83,22 @@ namespace BookStoreMiddleware.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet]   //        [ODataRoute("DejmiCustById")]
         public IActionResult DejmiCustById() // contacts/contacts/ContactsService.DejmiCustById
         {
-            //[FromODataUri] int key
+            //
             var result = "abcde";
+            return Ok(result);
+        }
+
+        [Microsoft.AspNetCore.Mvc.HttpGet]
+        [ODataRoute("DejmiCustByIdSParametrem(NejakeId={nejakeId})")]
+        public IActionResult DejmiCustByIdSParametrem([FromODataUri] int nejakeId) // .../contacts/DejmiCustByIdSParametrem(NejakeId=12)
+        {
+            // protoze je to v Startup.cs definovano jako "Unbound Function"
+            // builder.Function("DejmiCustByIdSParametrem").Returns<string>().Parameter<int>("NejakeId");
+            // a ne jako 
+            // builder.EntityType<Contact>().Collection.Function("DejmiCustById").Returns<string>();
+            //tak je ve volaci URL o jedno "contacts" mene
+
+            var result = $"DejmiCustByIdSParametrem OK: {nejakeId}";
             return Ok(result);
         }
 
