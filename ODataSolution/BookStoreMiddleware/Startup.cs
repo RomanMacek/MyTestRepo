@@ -37,7 +37,12 @@ namespace BookStoreMiddleware
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BookStoreContext>(opt => opt.UseInMemoryDatabase("BookLists")); // Za druhé, měli bychom registrovat databázový kontext pomocí 
-            services.AddOData();  // ASP.NET Core OData vyžaduje některé služby registrované vpřed, aby poskytly své funkce. 
+            services.AddOData();  // ASP.NET Core OData vyžaduje některé služby registrované vpřed, aby poskytly své funkce.             
+
+            //services.AddIdentity<ApplicationUser, IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //    .AddDefaultTokenProviders();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<ContactsContextDb.ContactsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -71,13 +76,11 @@ namespace BookStoreMiddleware
             {
                 b.Select().Expand().Filter().OrderBy().MaxTop(100).Count();  //Přidání následujícího řádku kódu do Startup.cs umožňuje všechny možnosti dotazu OData, například $ filter, $ orderby, $ expand, atd.
                 b.MapODataServiceRoute("odata", "odata", GetEdmModel());
+                b.MapRoute(
+                    name: "default",
+                    template: "api/{controller}/{action=Index}/{id?}"
+                );
                 //b.MapODataServiceRoute("contacts", "contacts", GetEdmModelContacts());
-
-
-                b.MapODataServiceRoute("contacts", "contacts", GetEdmModelContacts());
-                //b.MapODataServiceRoute("contacts/ById", "contacts/ById", GetEdmModelContacts());
-                //b.MapODataServiceRoute("api/[controller]", "contacts", GetEdmModelContacts());
-
             });
         }
 

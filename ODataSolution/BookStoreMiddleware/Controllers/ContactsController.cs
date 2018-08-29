@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
+using Microsoft.OData.UriParser;
 
 namespace BookStoreMiddleware.Controllers
 {
@@ -64,6 +65,32 @@ namespace BookStoreMiddleware.Controllers
         public async Task<IActionResult> Get([FromODataUri] int key)  // /contacts/contacts(1)
         {
             var item = await ContactsRepo.Find(key);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return Ok(item);
+        }
+
+        [HttpGet]
+        public IActionResult GetCustById(string id) //http://localhost:2459/api/contacts/getcustbyid/11
+        {
+            var result = "abcde";
+            return Ok(result);
+        }
+
+        //[HttpGet]
+        //public IActionResult GetCustById(string id)
+        //{
+        //    var result = "abcde";
+        //    return Ok(result);
+        //}
+
+        //[HttpPost]
+        [EnableQuery(AllowedFunctions = AllowedFunctions.All, AllowedQueryOptions = AllowedQueryOptions.All)]
+        public async Task<IActionResult> Post([FromBody]Contact contact)  // /contacts/contacts(1)
+        {
+            var item = await ContactsRepo.Find(contact.Id);
             if (item == null)
             {
                 return NotFound();
