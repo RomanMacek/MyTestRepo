@@ -81,8 +81,9 @@ namespace BookStoreMiddleware
                 //    name: "default",
                 //    template: "api/{controller}/{action=Index}/{id?}"
                 //);
-                b.MapODataServiceRoute(routeName: "OContactsRoute", routePrefix: "contacts", model: GetEdmModelContacts());
-                //b.MapODataServiceRoute("contacts", "contacts", GetEdmModelContacts());
+                b.MapODataServiceRoute(routeName: "OContactsRoute", 
+                                       routePrefix: "contacts", 
+                                       model: GetEdmModelContacts());
             });
         }
 
@@ -104,11 +105,12 @@ namespace BookStoreMiddleware
         //    function.ReturnsCollectionFromEntitySet<Contacts("SampleData");
         //}
 
-        private static IEdmModel GetEdmModelContacts()
+        private static IEdmModel GetEdmModelContacts() //ODataModelBuilder MapODataServiceRoute 
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Contact>("Contacts");
-
+            builder.Namespace = "ContactsService";
+            builder.EntityType<Contact>().Collection.Function("DejmiCustById").Returns<string>();
 
           //  builder.EntityType<Contact>().Collection.Function("ById").Returns<IActionResult>();
 

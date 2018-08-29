@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http;
 using BookStoreMiddleware.Contexts;
 using BookStoreMiddleware.Interface;
 using BookStoreMiddleware.Models;
@@ -17,8 +18,14 @@ using Microsoft.OData.UriParser;
 
 namespace BookStoreMiddleware.Controllers
 {
-  //  [Route("api/[controller]")]
-  //      [ApiController]
+
+    //  https://docs.microsoft.com/cs-cz/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-actions-and-functions
+       
+        // je zde insert update select ....
+       //https://docs.microsoft.com/cs-cz/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint
+
+    //  [Route("api/[controller]")]
+    //      [ApiController]
     public class ContactsController : ODataController
     {
         public IContactsRepository ContactsRepo { get; set; }
@@ -60,9 +67,9 @@ namespace BookStoreMiddleware.Controllers
             return Ok(contactList);
         }
 
-        [HttpGet]
+        [Microsoft.AspNetCore.Mvc.HttpGet]
         [EnableQuery]        
-        public async Task<IActionResult> Get([FromODataUri] int key) //public async Task<IActionResult> Get([FromODataUri] int key)  // http://localhost:2459/api/contacts/get?key=123
+        public async Task<IActionResult> Get([FromODataUri] int key) // .../contacts/contacts/2
         {
             var id = 1;
             var item = await ContactsRepo.Find(key);
@@ -73,10 +80,10 @@ namespace BookStoreMiddleware.Controllers
             return Ok(item);
         }
 
-        [HttpGet]
-        [EnableQuery]
-        public IActionResult GetCustById(string id) //http://localhost:2459/api/contacts/getcustbyid/11
+        [Microsoft.AspNetCore.Mvc.HttpGet]   //        [ODataRoute("DejmiCustById")]
+        public IActionResult DejmiCustById() // contacts/contacts/ContactsService.DejmiCustById
         {
+            //[FromODataUri] int key
             var result = "abcde";
             return Ok(result);
         }
@@ -90,7 +97,7 @@ namespace BookStoreMiddleware.Controllers
 
         //[HttpPost]
         [EnableQuery(AllowedFunctions = AllowedFunctions.All, AllowedQueryOptions = AllowedQueryOptions.All)]
-        public async Task<IActionResult> Post([FromBody]Contact contact)  // /contacts/contacts(1)
+        public async Task<IActionResult> Post([Microsoft.AspNetCore.Mvc.FromBody]Contact contact)  // /contacts/contacts(1)
         {
             var item = await ContactsRepo.Find(contact.Id);
             if (item == null)
