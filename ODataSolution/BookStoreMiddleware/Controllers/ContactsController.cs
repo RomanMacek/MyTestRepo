@@ -61,9 +61,10 @@ namespace BookStoreMiddleware.Controllers
         }
 
         [HttpGet]
-        [EnableQuery(AllowedFunctions = AllowedFunctions.All, AllowedQueryOptions = AllowedQueryOptions.All)]
-        public async Task<IActionResult> Get([FromODataUri] int key)  // /contacts/contacts(1)
+        [EnableQuery]        
+        public async Task<IActionResult> Get([FromODataUri] int key) //public async Task<IActionResult> Get([FromODataUri] int key)  // http://localhost:2459/api/contacts/get?key=123
         {
+            var id = 1;
             var item = await ContactsRepo.Find(key);
             if (item == null)
             {
@@ -73,6 +74,7 @@ namespace BookStoreMiddleware.Controllers
         }
 
         [HttpGet]
+        [EnableQuery]
         public IActionResult GetCustById(string id) //http://localhost:2459/api/contacts/getcustbyid/11
         {
             var result = "abcde";

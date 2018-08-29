@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http;
 using BookStore.Models;
 using BookStoreMiddleware.Contexts;
 using BookStoreMiddleware.Interface;
@@ -76,10 +77,11 @@ namespace BookStoreMiddleware
             {
                 b.Select().Expand().Filter().OrderBy().MaxTop(100).Count();  //Přidání následujícího řádku kódu do Startup.cs umožňuje všechny možnosti dotazu OData, například $ filter, $ orderby, $ expand, atd.
                 b.MapODataServiceRoute("odata", "odata", GetEdmModel());
-                b.MapRoute(
-                    name: "default",
-                    template: "api/{controller}/{action=Index}/{id?}"
-                );
+                //b.MapRoute(
+                //    name: "default",
+                //    template: "api/{controller}/{action=Index}/{id?}"
+                //);
+                b.MapODataServiceRoute(routeName: "OcontactsRoute", routePrefix: "contacts", model: GetEdmModelContacts());
                 //b.MapODataServiceRoute("contacts", "contacts", GetEdmModelContacts());
             });
         }
