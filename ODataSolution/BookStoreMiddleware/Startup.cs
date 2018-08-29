@@ -76,12 +76,12 @@ namespace BookStoreMiddleware
             app.UseMvc(b =>
             {
                 b.Select().Expand().Filter().OrderBy().MaxTop(100).Count();  //Přidání následujícího řádku kódu do Startup.cs umožňuje všechny možnosti dotazu OData, například $ filter, $ orderby, $ expand, atd.
-                b.MapODataServiceRoute("odata", "odata", GetEdmModel());
+                b.MapODataServiceRoute("OBooksRoute", "books", GetEdmModel());
                 //b.MapRoute(
                 //    name: "default",
                 //    template: "api/{controller}/{action=Index}/{id?}"
                 //);
-                b.MapODataServiceRoute(routeName: "OcontactsRoute", routePrefix: "contacts", model: GetEdmModelContacts());
+                b.MapODataServiceRoute(routeName: "OContactsRoute", routePrefix: "contacts", model: GetEdmModelContacts());
                 //b.MapODataServiceRoute("contacts", "contacts", GetEdmModelContacts());
             });
         }
