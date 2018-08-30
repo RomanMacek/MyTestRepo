@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -76,14 +77,15 @@ namespace BookStoreMiddleware
             app.UseMvc(b =>
             {
                 b.Select().Expand().Filter().OrderBy().MaxTop(100).Count();  //Přidání následujícího řádku kódu do Startup.cs umožňuje všechny možnosti dotazu OData, například $ filter, $ orderby, $ expand, atd.
-                b.MapODataServiceRoute("OBooksRoute", "books", GetEdmModel());
-                //b.MapRoute(
-                //    name: "default",
-                //    template: "api/{controller}/{action=Index}/{id?}"
-                //);
-                b.MapODataServiceRoute(routeName: "OContactsRoute", 
-                                       routePrefix: "contacts", 
-                                       model: GetEdmModelContacts());
+                                                                             //          b.MapODataServiceRoute("OBooksRoute", "books", GetEdmModel());
+                b.MapRoute(
+                    name: "default",
+                    template: "{controller}/{action=Index}/{id?}"
+                );
+                //b.MapODataServiceRoute(routeName: "OContactsRoute", 
+                //                       routePrefix: "contacts", 
+                //                       model: GetEdmModelContacts());
+                b.EnableDependencyInjection();
             });
         }
 
@@ -108,14 +110,26 @@ namespace BookStoreMiddleware
         private static IEdmModel GetEdmModelContacts() //ODataModelBuilder MapODataServiceRoute 
         {
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+          //  builder.EntitySet<Contact>(nameof(Contact));
             builder.EntitySet<Contact>("Contacts");
-            builder.Namespace = "ContactsService";
-            builder.EntityType<Contact>().Collection.Function("DejmiCustById").Returns<string>();
 
-            // "Unbound Function" muze byt v jakymkoli controlleru a ne jen v controlleru Contacts => je dobre "Unbound Function" pouzivat ??
-            builder.Function("DejmiCustByIdSParametrem").Returns<string>().Parameter<int>("NejakeId");
 
-          //  builder.EntityType<Contact>().Collection.Function("ById").Returns<IActionResult>();
+          //  builder.Namespace = "ContactsService";
+          //  builder.EntityType<Contact>().Collection.Function("DejmiCustById").Returns<string>();
+
+          //  // "Unbound Function" muze byt v jakymkoli controlleru a ne jen v controlleru Contacts => je dobre "Unbound Function" pouzivat ??
+          //  builder.Function("DejmiCustByIdSParametrem").Returns<string>().Parameter<int>("NejakeId");
+
+
+          //  //var function = builder.Function("DejmiCustByIdSViceParametry");
+          //  //builder.EntityType<Contact>().Collection.Function("DejmiCustByIdSViceParametry")
+          //  //    .Returns<string>()
+          //  //    .Parameter<int>("PrvniParam");
+
+          ////  var fce = builder.Action("DejmiCustByIdSViceParametry")
+          //  var fce = builder.EntityType<Contact>().Collection.Function("DejmiCustByIdSViceParametry")
+          //      .Returns<string>()
+          //      .Parameter<int>("PrvniParam");
 
             return builder.GetEdmModel();
         }

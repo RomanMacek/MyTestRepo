@@ -20,12 +20,15 @@ namespace BookStoreMiddleware.Controllers
 {
 
     //  https://docs.microsoft.com/cs-cz/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-actions-and-functions
-       
-        // je zde insert update select ....
-       //https://docs.microsoft.com/cs-cz/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint
+
+    // je zde insert update select ....
+    //https://docs.microsoft.com/cs-cz/aspnet/web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint
 
     //  [Route("api/[controller]")]
     //      [ApiController]
+
+    [Route("[controller]")]
+    [ODataRoutePrefix("values")]
     public class ContactsController : ODataController
     {
         public IContactsRepository ContactsRepo { get; set; }
@@ -80,34 +83,48 @@ namespace BookStoreMiddleware.Controllers
             return Ok(item);
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpGet]   //        [ODataRoute("DejmiCustById")]
-        public IActionResult DejmiCustById() // contacts/contacts/ContactsService.DejmiCustById
+        [HttpGet("DejmiCust")]   //        [ODataRoute("DejmiCustById")]
+        [ODataRoute]
+        public IActionResult DejmiCust() // contacts/contacts/ContactsService.DejmiCustById
         {
             //
             var result = "abcde";
             return Ok(result);
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpGet]
-        [ODataRoute("DejmiCustByIdSParametrem(NejakeId={nejakeId})")]
-        public IActionResult DejmiCustByIdSParametrem([FromODataUri] int nejakeId) // .../contacts/DejmiCustByIdSParametrem(NejakeId=12)
+        // /contacts/DejmiCustSParametrem(PrvniParam=11)
+        [Microsoft.AspNetCore.Mvc.HttpGet("DejmiCustSParametrem(PrvniParam={prvniParam})")]
+        [EnableQuery]
+        public IActionResult DejmiCustSParametrem(int prvniParam)
         {
-            // protoze je to v Startup.cs definovano jako "Unbound Function"
-            // builder.Function("DejmiCustByIdSParametrem").Returns<string>().Parameter<int>("NejakeId");
-            // a ne jako 
-            // builder.EntityType<Contact>().Collection.Function("DejmiCustById").Returns<string>();
-            //tak je ve volaci URL o jedno "contacts" mene
-
-            var result = $"DejmiCustByIdSParametrem OK: {nejakeId}";
+            var result = $"DejmiCustByIdSParametrem OK:555";
             return Ok(result);
         }
 
-        //[HttpGet]
-        //public IActionResult GetCustById(string id)
-        //{
-        //    var result = "abcde";
-        //    return Ok(result);
-        //}
+        // /contacts/DejmiCustSParametremShort(11)
+        [Microsoft.AspNetCore.Mvc.HttpGet("DejmiCustSParametremShort({prvniParam})")]
+        [EnableQuery]
+        public IActionResult DejmiCustSParametremShort(int prvniParam)
+        {
+            return Ok("XXXX");
+        }
+
+        // /contacts/DejmiCustSViceParametry(456,789)
+        [Microsoft.AspNetCore.Mvc.HttpGet("DejmiCustSViceParametry({prvniParam},{druhyParam})")]
+        [EnableQuery]
+        public IActionResult DejmiCustSViceParametry(int prvniParam, int druhyParam)
+        {
+            return Ok("YYYYYY");
+        }
+
+        // /contacts/DejmiCustSViceParametry2(456,789)
+        [Microsoft.AspNetCore.Mvc.HttpGet("DejmiCustSViceParametry2({prvniParam},{druhyParam})")]
+        [EnableQuery]
+        public IActionResult DejmiCustSViceParametry2(int prvniParam, int druhyParam)
+        {
+            var result = new List<int>(){prvniParam, druhyParam};
+            return Ok(result);
+        }
 
         //[HttpPost]
         [EnableQuery(AllowedFunctions = AllowedFunctions.All, AllowedQueryOptions = AllowedQueryOptions.All)]
@@ -121,39 +138,5 @@ namespace BookStoreMiddleware.Controllers
             return Ok(item);
         }
 
-
-        //[HttpPost]
-        //public async Task<IActionResult> Create([FromBody] Contact item)
-        //{
-        //    if (item == null)
-        //    {
-        //        return BadRequest();
-        //    }
-        //    await ContactsRepo.Add(item);
-        //    return CreatedAtRoute("GetContacts", new { Controller = "Contacts", id = item.MobilePhone }, item);
-        //}
-
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> Update(string id, [FromBody] Contact item)
-        //{
-        //    if (item == null)
-        //    {
-        //        return BadRequest();
-        //    }
-        //    var contactObj = await ContactsRepo.Find(id);
-        //    if (contactObj == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    await ContactsRepo.Update(item);
-        //    return NoContent();
-        //}
-
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> Delete(string id)
-        //{
-        //    await ContactsRepo.Remove(id);
-        //    return NoContent();
-        //}
     }
 }
