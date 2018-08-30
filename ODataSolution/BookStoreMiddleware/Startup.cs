@@ -82,9 +82,9 @@ namespace BookStoreMiddleware
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}"
                 );
-                //b.MapODataServiceRoute(routeName: "OContactsRoute", 
-                //                       routePrefix: "contacts", 
-                //                       model: GetEdmModelContacts());
+                b.MapODataServiceRoute(routeName: "OContactsRoute",
+                                       routePrefix: "contacts",
+                                       model: GetEdmModelContacts());
                 b.EnableDependencyInjection();
             });
         }

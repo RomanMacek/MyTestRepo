@@ -33,18 +33,18 @@ namespace BookStoreMiddleware.Controllers
     {
         public IContactsRepository ContactsRepo { get; set; }
 
-        public ContactsController(IContactsRepository _repo)
-        {
-            ContactsRepo = _repo;
-        }
+        //public ContactsController(IContactsRepository _repo)
+        //{
+        //    ContactsRepo = _repo;
+        //}
 
         private ContactsContextMem _dbMem;
         private ContactsContextDb.ContactsContext _db;
 
-        //public ContactsController(ContactsContextDb.ContactsContext context)
-        //{
-        //    _db = context;
-        //}
+        public ContactsController(ContactsContextDb.ContactsContext context)
+        {
+            _db = context;
+        }
 
         //public ContactsController(ContactsContextMem context)
         //{
@@ -67,6 +67,7 @@ namespace BookStoreMiddleware.Controllers
             var contactList = await ContactsRepo.GetAll();
             //var contactList = _dbMem.Contacts;
             //var contactList = ContactsRepo.GetAllBase();
+            var aaa = _db.Contacts;
             return Ok(contactList);
         }
 
@@ -87,8 +88,7 @@ namespace BookStoreMiddleware.Controllers
         [ODataRoute]
         public IActionResult DejmiCust() // contacts/contacts/ContactsService.DejmiCustById
         {
-            //
-            var result = "abcde";
+            var result = _db.Contacts;
             return Ok(result);
         }
 
@@ -97,7 +97,7 @@ namespace BookStoreMiddleware.Controllers
         [EnableQuery]
         public IActionResult DejmiCustSParametrem(int prvniParam)
         {
-            var result = $"DejmiCustByIdSParametrem OK:555";
+            var result = _db.Contacts.Where(x => x.Id == prvniParam);
             return Ok(result);
         }
 
@@ -106,15 +106,17 @@ namespace BookStoreMiddleware.Controllers
         [EnableQuery]
         public IActionResult DejmiCustSParametremShort(int prvniParam)
         {
-            return Ok("XXXX");
+            var result = _db.Contacts.Where(x => x.Id == prvniParam);
+            return Ok(result);
         }
 
         // /contacts/DejmiCustSViceParametry(456,789)
         [Microsoft.AspNetCore.Mvc.HttpGet("DejmiCustSViceParametry({prvniParam},{druhyParam})")]
         [EnableQuery]
-        public IActionResult DejmiCustSViceParametry(int prvniParam, int druhyParam)
+        public IActionResult DejmiCustSViceParametry(int prvniParam, string druhyParam)
         {
-            return Ok("YYYYYY");
+            var result = _db.Contacts.Where(x => x.Id == prvniParam);
+            return Ok(result);
         }
 
         // /contacts/DejmiCustSViceParametry2(456,789)
