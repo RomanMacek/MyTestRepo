@@ -13,8 +13,8 @@ namespace BookStoreMiddleware.Interface
         IEnumerable<Contact> GetAllBase();
         Task<IEnumerable<Contact>> GetAll();
         Task<Contact> Find(int key);
-        Task Remove(string Id);
-        Task Update(Contact item);
+ //      Task Remove(string Id);
+ //       Task Update(Contact item);
 
         bool CheckValidUserKey(string reqkey);
     }

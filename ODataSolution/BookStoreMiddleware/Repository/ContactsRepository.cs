@@ -67,33 +67,33 @@ namespace BookStoreMiddleware.Repository
                 .SingleOrDefaultAsync();
         }
 
-        public async Task Remove(string Id)
-        {
-            var itemToRemove = await _context.Contacts.SingleOrDefaultAsync(r => r.MobilePhone == Id);
-            if (itemToRemove != null)
-            {
-                _context.Contacts.Remove(itemToRemove);
-                await _context.SaveChangesAsync();
-            }
-        }
+        //public async Task Remove(string Id)
+        //{
+        //    var itemToRemove = await _context.Contacts.SingleOrDefaultAsync(r => r.MobilePhone == Id);
+        //    if (itemToRemove != null)
+        //    {
+        //        _context.Contacts.Remove(itemToRemove);
+        //        await _context.SaveChangesAsync();
+        //    }
+        //}
 
-        public async Task Update(Contact item)
-        {
-            var itemToUpdate = await _context.Contacts.SingleOrDefaultAsync(r => r.MobilePhone == item.MobilePhone);
-            if (itemToUpdate != null)
-            {
-                itemToUpdate.FirstName = item.FirstName;
-                itemToUpdate.LastName = item.LastName;
-                itemToUpdate.IsFamilyMember = item.IsFamilyMember;
-                itemToUpdate.Company = item.Company;
-                itemToUpdate.JobTitle = item.JobTitle;
-                itemToUpdate.Email = item.Email;
-                itemToUpdate.MobilePhone = item.MobilePhone;
-                itemToUpdate.DateOfBirth = item.DateOfBirth;
-                itemToUpdate.AnniversaryDate = item.AnniversaryDate;
-                await _context.SaveChangesAsync();
-            }
-        }
+        //public async Task Update(Contact item)
+        //{
+        //    var itemToUpdate = await _context.Contacts.SingleOrDefaultAsync(r => r.MobilePhone == item.MobilePhone);
+        //    if (itemToUpdate != null)
+        //    {
+        //        itemToUpdate.FirstName = item.FirstName;
+        //        itemToUpdate.LastName = item.LastName;
+        //        itemToUpdate.IsFamilyMember = item.IsFamilyMember;
+        //        itemToUpdate.Company = item.Company;
+        //        itemToUpdate.JobTitle = item.JobTitle;
+        //        itemToUpdate.Email = item.Email;
+        //        itemToUpdate.MobilePhone = item.MobilePhone;
+        //        itemToUpdate.DateOfBirth = item.DateOfBirth;
+        //        itemToUpdate.AnniversaryDate = item.AnniversaryDate;
+        //        await _context.SaveChangesAsync();
+        //    }
+        //}
 
     }
 }

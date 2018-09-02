@@ -27,16 +27,13 @@ namespace BookStoreMiddleware.Controllers
     //  [Route("api/[controller]")]
     //      [ApiController]
 
-    [Route("[controller]")]
-    [ODataRoutePrefix("values")]
+
+    //    [Route("ABCD")]  ... => /ABCD/DejmiCustSViceParametry(2,bbb)
+    [Route("[controller]")]  
+//    [ODataRoutePrefix("values")]
     public class ContactsController : ODataController
     {
         public IContactsRepository ContactsRepo { get; set; }
-
-        //public ContactsController(IContactsRepository _repo)
-        //{
-        //    ContactsRepo = _repo;
-        //}
 
         private ContactsContextMem _dbMem;
         private ContactsContextDb.ContactsContext _db;
@@ -46,23 +43,8 @@ namespace BookStoreMiddleware.Controllers
             _db = context;
         }
 
-        //public ContactsController(ContactsContextMem context)
-        //{
-        //    _dbMem = context;
-        //    var item1 = new Contact()
-        //    {
-        //        Id = 1,
-        //        Company = "AAAA",
-        //        FirstName = "BBBB",
-        //        LastName = "CCCC"
-        //    };
-
-        //    context.Contacts.Add(item1);
-        //    context.SaveChanges();
-        //}
-
         [EnableQuery]
-        public async Task<IActionResult> Get() //public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get()
         {
             var contactList = await ContactsRepo.GetAll();
             //var contactList = _dbMem.Contacts;
@@ -71,18 +53,18 @@ namespace BookStoreMiddleware.Controllers
             return Ok(contactList);
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpGet]
-        [EnableQuery]        
-        public async Task<IActionResult> Get([FromODataUri] int key) // .../contacts/contacts/2
-        {
-            var id = 1;
-            var item = await ContactsRepo.Find(key);
-            if (item == null)
-            {
-                return NotFound();
-            }
-            return Ok(item);
-        }
+        //[Microsoft.AspNetCore.Mvc.HttpGet]
+        //[EnableQuery]
+        //public async Task<IActionResult> Get([FromODataUri] int key) // .../contacts/contacts/2
+        //{
+        //    var id = 1;
+        //    var item = await ContactsRepo.Find(key);
+        //    if (item == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(item);
+        //}
 
         [HttpGet("DejmiCust")]   //        [ODataRoute("DejmiCustById")]
         [ODataRoute]
@@ -102,15 +84,16 @@ namespace BookStoreMiddleware.Controllers
         }
 
         // /contacts/DejmiCustSParametremShort(11)
-        [Microsoft.AspNetCore.Mvc.HttpGet("DejmiCustSParametremShort({prvniParam})")]
+        [Microsoft.AspNetCore.Mvc.HttpGet("DejmiCustSParametremShort({prvniParam:int})")]
         [EnableQuery]
         public IActionResult DejmiCustSParametremShort(int prvniParam)
         {
-            var result = _db.Contacts.Where(x => x.Id == prvniParam);
+            var result = _db.Contacts.FirstOrDefault(x => x.Id == prvniParam);
             return Ok(result);
         }
 
         // /contacts/DejmiCustSViceParametry(456,789)
+        // /contacts/DejmiCustSViceParametry(2,bbb)
         [Microsoft.AspNetCore.Mvc.HttpGet("DejmiCustSViceParametry({prvniParam},{druhyParam})")]
         [EnableQuery]
         public IActionResult DejmiCustSViceParametry(int prvniParam, string druhyParam)
@@ -124,20 +107,36 @@ namespace BookStoreMiddleware.Controllers
         [EnableQuery]
         public IActionResult DejmiCustSViceParametry2(int prvniParam, int druhyParam)
         {
-            var result = new List<int>(){prvniParam, druhyParam};
+            var result = new List<int>() { prvniParam, druhyParam };
             return Ok(result);
         }
 
-        //[HttpPost]
-        [EnableQuery(AllowedFunctions = AllowedFunctions.All, AllowedQueryOptions = AllowedQueryOptions.All)]
-        public async Task<IActionResult> Post([Microsoft.AspNetCore.Mvc.FromBody]Contact contact)  // /contacts/contacts(1)
+        // /contacts/pridejzaznam(abcd)
+        [HttpPost("PridejZaznam({vstupHodnota})")]
+        public IActionResult PridejZaznam(string vstupHodnota)
         {
-            var item = await ContactsRepo.Find(contact.Id);
-            if (item == null)
-            {
-                return NotFound();
-            }
-            return Ok(item);
+
+            return Ok($"Parametr: {vstupHodnota}");
+        }
+
+        //  [HttpPost("PridejZaznamComplet({contact})")]
+        //  [EnableQuery(AllowedFunctions = AllowedFunctions.All, AllowedQueryOptions = AllowedQueryOptions.All)]
+        //[HttpPost("{contact}")]
+        [HttpPost]
+        public IActionResult Post([FromBody] Contact contact) // public IActionResult Post([Microsoft.AspNetCore.Mvc.FromBody]Contact contact)  // /contacts/contacts(1)
+        {
+            //var item = await ContactsRepo.Find(contact.Id);
+            //if (item == null)
+            //{
+            //    return NotFound();
+            //}
+            return Ok("XXXXX");
+        }
+
+        [HttpPut] //  [AcceptVerbs("PUT")]      
+        public IActionResult Put( Contact contact)
+        {
+            return Ok("XXXXX");
         }
 
     }

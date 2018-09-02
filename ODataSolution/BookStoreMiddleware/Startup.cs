@@ -113,23 +113,22 @@ namespace BookStoreMiddleware
           //  builder.EntitySet<Contact>(nameof(Contact));
             builder.EntitySet<Contact>("Contacts");
 
+            //  builder.Namespace = "ContactsService";
+            //  builder.EntityType<Contact>().Collection.Function("DejmiCustById").Returns<string>();
 
-          //  builder.Namespace = "ContactsService";
-          //  builder.EntityType<Contact>().Collection.Function("DejmiCustById").Returns<string>();
-
-          //  // "Unbound Function" muze byt v jakymkoli controlleru a ne jen v controlleru Contacts => je dobre "Unbound Function" pouzivat ??
-          //  builder.Function("DejmiCustByIdSParametrem").Returns<string>().Parameter<int>("NejakeId");
+            //  // "Unbound Function" muze byt v jakymkoli controlleru a ne jen v controlleru Contacts => je dobre "Unbound Function" pouzivat ??
+            //  builder.Function("DejmiCustByIdSParametrem").Returns<string>().Parameter<int>("NejakeId");
 
 
-          //  //var function = builder.Function("DejmiCustByIdSViceParametry");
-          //  //builder.EntityType<Contact>().Collection.Function("DejmiCustByIdSViceParametry")
-          //  //    .Returns<string>()
-          //  //    .Parameter<int>("PrvniParam");
+            //  //var function = builder.Function("DejmiCustByIdSViceParametry");
+            //  //builder.EntityType<Contact>().Collection.Function("DejmiCustByIdSViceParametry")
+            //  //    .Returns<string>()
+            //  //    .Parameter<int>("PrvniParam");
 
-          ////  var fce = builder.Action("DejmiCustByIdSViceParametry")
-          //  var fce = builder.EntityType<Contact>().Collection.Function("DejmiCustByIdSViceParametry")
-          //      .Returns<string>()
-          //      .Parameter<int>("PrvniParam");
+            ////  var fce = builder.Action("DejmiCustByIdSViceParametry")
+            //  var fce = builder.EntityType<Contact>().Collection.Function("DejmiCustByIdSViceParametry")
+            //      .Returns<string>()
+            //      .Parameter<int>("PrvniParam");
 
             return builder.GetEdmModel();
         }
