@@ -1,0 +1,5 @@
+C:\WorkSoukromy\ODataSolution\bin\Debug\BookStoreMiddleware.dll
+C:\WorkSoukromy\ODataSolution\bin\Debug\BookStoreMiddleware.pdb
+C:\WorkSoukromy\ODataSolution\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+C:\WorkSoukromy\ODataSolution\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\WorkSoukromy\ODataSolution\obj\Debug\docker-compose.dcproj.CopyComplete

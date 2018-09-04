@@ -16,7 +16,24 @@ namespace BookStoreMiddlewareTest
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            PostTest().Wait();
+            GetTest().Wait();
+        }
+
+        static async Task GetTest()
+        {
+            var uri = new Uri("http://localhost:2459/");
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = uri;
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage response = await client.GetAsync("Contacts/DejmiCustSParametremShort(1)");
+                if (response.IsSuccessStatusCode)
+                {
+                    var concact = await response.Content.ReadAsAsync<Contact>();
+                }
+            }
         }
 
         static async Task PostTest()

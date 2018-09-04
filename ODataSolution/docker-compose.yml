@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bookstoremiddleware:
+    image: ${DOCKER_REGISTRY}bookstoremiddleware
+    build:
+      context: .
+      dockerfile: BookStoreMiddleware\Dockerfile

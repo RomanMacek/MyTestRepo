@@ -14,7 +14,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreNLog", "BookStoreN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreMiddleware", "BookStoreMiddleware\BookStoreMiddleware.csproj", "{425307F3-1300-4E35-9A43-2965913C920F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreMiddlewareTest", "BookStoreMiddlewareTest\BookStoreMiddlewareTest.csproj", "{AD1021CF-66F8-4F9B-9708-B0C31B6A6616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreMiddlewareTest", "BookStoreMiddlewareTest\BookStoreMiddlewareTest.csproj", "{AD1021CF-66F8-4F9B-9708-B0C31B6A6616}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D5E4D1EB-BD76-407D-A4B6-926D87CE2936}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{AD1021CF-66F8-4F9B-9708-B0C31B6A6616}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD1021CF-66F8-4F9B-9708-B0C31B6A6616}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD1021CF-66F8-4F9B-9708-B0C31B6A6616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E4D1EB-BD76-407D-A4B6-926D87CE2936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E4D1EB-BD76-407D-A4B6-926D87CE2936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E4D1EB-BD76-407D-A4B6-926D87CE2936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E4D1EB-BD76-407D-A4B6-926D87CE2936}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
