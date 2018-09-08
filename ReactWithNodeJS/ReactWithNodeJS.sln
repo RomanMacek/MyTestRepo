@@ -9,7 +9,11 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "MyTypeScript01", "MyTypeScr
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "MyTypeScriptConsole01", "MyTypeScriptConsole01\MyTypeScriptConsole01.njsproj", "{DC991B2B-981D-42C3-A3C2-C8585882B53C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppWithTypeScript", "WebAppWithTypeScript\WebAppWithTypeScript.csproj", "{0C30DD2D-571F-48A1-B81F-4289CE8A4486}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppWithTypeScript", "WebAppWithTypeScript\WebAppWithTypeScript.csproj", "{0C30DD2D-571F-48A1-B81F-4289CE8A4486}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppWithTypeScriptDleVidea", "WebAppWithTypeScriptDleVidea\WebAppWithTypeScriptDleVidea.csproj", "{64D9BD69-6F1D-4A14-B068-3A8B801DC78D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppWithTypeScriptDleVideaFullFrwk", "WebAppWithTypeScriptDleVideaFullFrwk\WebAppWithTypeScriptDleVideaFullFrwk.csproj", "{562FC353-A51F-4882-A432-C6256273F867}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{0C30DD2D-571F-48A1-B81F-4289CE8A4486}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C30DD2D-571F-48A1-B81F-4289CE8A4486}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C30DD2D-571F-48A1-B81F-4289CE8A4486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D9BD69-6F1D-4A14-B068-3A8B801DC78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D9BD69-6F1D-4A14-B068-3A8B801DC78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D9BD69-6F1D-4A14-B068-3A8B801DC78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D9BD69-6F1D-4A14-B068-3A8B801DC78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562FC353-A51F-4882-A432-C6256273F867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562FC353-A51F-4882-A432-C6256273F867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562FC353-A51F-4882-A432-C6256273F867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562FC353-A51F-4882-A432-C6256273F867}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
