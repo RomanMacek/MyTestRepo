@@ -1,0 +1,2 @@
+C:\WorkSoukromy\ReactWithNodeJS\MyTypeScriptConsole01\obj\Debug\MyTypeScriptConsole01.njsproj.CoreCompileInputs.cache
+C:\WorkSoukromy\ReactWithNodeJS\MyTypeScriptConsole01\bin\Microsoft.NodejsTools.WebRole.dll
