@@ -1,2 +1,9 @@
 použité zdroje:
 https://www.youtube.com/watch?v=fZsdEiTgv6o
+
+
+React pouzite zdroje:
+https://docs.microsoft.com/en-us/visualstudio/javascript/tutorial-nodejs-with-react-and-jsx?view=vs-2017
+
+https://docs.microsoft.com/en-us/visualstudio/javascript/tutorial-nodejs-with-react-and-jsx?view=vs-2017
+
