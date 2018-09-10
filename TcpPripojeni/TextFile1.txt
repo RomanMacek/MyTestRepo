@@ -2,3 +2,5 @@ https://www.itnetwork.cz/csharp/pokrocile/csharp-tutorial-tcp-pripojeni-komunika
 
 
 https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
+
+aaa
