@@ -60,6 +60,8 @@ ODataSolution/BookStoreMiddleware/obj/
 ODataSolution/BookStoreMiddlewareTest/bin/
 ODataSolution/BookStoreMiddlewareTest/obj/
 DockerSample/
+ReactWithNodeJS/.vs/
+ReactWithNodeJS/MyTypeScriptConsole01/bin/
 ReactWithNodeJS/packages/
 ReactWithNodeJS/WebAppWithTypeScriptDleVidea/bin/
 ReactWithNodeJS/WebAppWithTypeScriptDleVidea/obj/
@@ -69,9 +71,9 @@ ReactWithNodeJSMyTest/.vs/
 ReactWithNodeJSMyTest/packages/
 ReactWithNodeJSMyTest/WebApp_01/bin/
 ReactWithNodeJSMyTest/WebApp_01/obj/
-ReactWithNodeJS/MyTypeScriptConsole01/bin/
-ReactWithNodeJS/packages/
-ReactWithNodeJS/WebAppWithTypeScriptDleVidea/bin/
-ReactWithNodeJS/WebAppWithTypeScriptDleVidea/obj/
-ReactWithNodeJS/WebAppWithTypeScriptDleVideaFullFrwk/bin/
-ReactWithNodeJS/WebAppWithTypeScriptDleVideaFullFrwk/obj/
+ReactWithNodeJS/WebAppWithTypeScript/obj/
+ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/.bin/
+ReactWithNodeJSMyTest/NodejsWebApp01/bin/
+ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/@mrmlnc/
+ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/
+ReactWithNodeJSMyTest/NodejsWebApp01/obj/
