@@ -15,7 +15,8 @@ namespace Client
             Console.WriteLine(" **** Klient **** ");
             //WaitCallback lCallback = new WaitCallback(Pokus_01);
             //ThreadPool.QueueUserWorkItem(lCallback, "Klient spusten");
-            Pokus_TcpClient("Klient spusten");
+            // Pokus_TcpClient("Klient spusten");
+            PikusServicePointManager();
             Console.ReadLine();
         }
 
@@ -75,5 +76,25 @@ namespace Client
             var message = Encoding.UTF8.GetString(buffer.Select<int, byte>(b => (byte)b).ToArray(), 0, buffer.Count);
             Console.WriteLine(message);
         }
+
+        private static void PikusServicePointManager()
+        {
+            Uri uri_income = new Uri("http://www.income.cz/");
+
+            // nemel najit ale mel by zalozit
+            ServicePoint incomeFrom_01 = ServicePointManager.FindServicePoint(uri_income);
+            // mel by uz najit
+            ServicePoint incomeFrom_02 = ServicePointManager.FindServicePoint(uri_income);
+
+            Uri uri_incomeSub = new Uri("http://jackpot.income.cz/");
+            ServicePoint incomeFrom_03 = ServicePointManager.FindServicePoint(uri_incomeSub);
+
+            Uri uri01 = new Uri("https://www.youtube.com/watch?v=teK_6kuQSiQ");
+            var uri01Res = ServicePointManager.FindServicePoint(uri01);
+
+            Uri uri02 = new Uri("https://www.youtube.com/watch?v=v-oPRvgMLOQ");
+            var uri02Res = ServicePointManager.FindServicePoint(uri02);
+        }
+
     }
 }
