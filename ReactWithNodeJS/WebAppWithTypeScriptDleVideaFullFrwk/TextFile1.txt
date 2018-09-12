@@ -1,5 +1,6 @@
 ﻿priklad vytvoren na zaklade tohoto videa
 https://www.youtube.com/watch?v=fZsdEiTgv6o
+<<<<<<< HEAD
 
 
 React pouzite zdroje:
@@ -7,3 +8,5 @@ https://docs.microsoft.com/en-us/visualstudio/javascript/tutorial-nodejs-with-re
 
 https://docs.microsoft.com/en-us/visualstudio/javascript/tutorial-nodejs-with-react-and-jsx?view=vs-2017
 
+=======
+>>>>>>> Pokusy s React (WebAppWithTypeScriptDleVideaFullFrwk  = funkcni)
