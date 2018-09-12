@@ -7,6 +7,7 @@ https://www.itnetwork.cz/csharp/pokrocile/csharp-tutorial-tcp-pripojeni-komunika
 https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
 
 aaa
+<<<<<<< HEAD
 1111
 =======
 https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
@@ -19,3 +20,6 @@ https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
 
 aaa
 >>>>>>> aa
+=======
+1111
+>>>>>>> ccc
