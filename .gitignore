@@ -71,6 +71,7 @@ ReactWithNodeJSMyTest/.vs/
 ReactWithNodeJSMyTest/packages/
 ReactWithNodeJSMyTest/WebApp_01/bin/
 ReactWithNodeJSMyTest/WebApp_01/obj/
+<<<<<<< HEAD
 ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/
 TcpPripojeni/Server/obj/
 TcpPripojeni/Server/bin/
@@ -91,3 +92,11 @@ SPAProjekt/.vs/config/applicationhost.config
 .gitignore_LOCAL_19056
 .gitignore_BASE_19056
 .gitignore_BACKUP_19056
+=======
+ReactWithNodeJS/WebAppWithTypeScript/obj/
+ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/.bin/
+ReactWithNodeJSMyTest/NodejsWebApp01/bin/
+ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/@mrmlnc/
+ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/
+ReactWithNodeJSMyTest/NodejsWebApp01/obj/
+>>>>>>> pokus o react komponentu
