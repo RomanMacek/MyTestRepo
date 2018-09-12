@@ -16,8 +16,12 @@ namespace Client
             //WaitCallback lCallback = new WaitCallback(Pokus_01);
             //ThreadPool.QueueUserWorkItem(lCallback, "Klient spusten");
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Pokus_TcpClient("Klient spusten");
             PikusServicePointManager();
+=======
+            Pokus_TcpClient("Klient spusten");
+>>>>>>> novy projekt TCP komunikace
 =======
             Pokus_TcpClient("Klient spusten");
 >>>>>>> novy projekt TCP komunikace
@@ -81,6 +85,7 @@ namespace Client
             Console.WriteLine(message);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         private static void PikusServicePointManager()
         {
@@ -101,6 +106,8 @@ namespace Client
             var uri02Res = ServicePointManager.FindServicePoint(uri02);
         }
 
+=======
+>>>>>>> novy projekt TCP komunikace
 =======
 >>>>>>> novy projekt TCP komunikace
     }
