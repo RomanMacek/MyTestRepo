@@ -3,6 +3,7 @@ https://www.itnetwork.cz/csharp/pokrocile/csharp-tutorial-tcp-pripojeni-komunika
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
 
 aaa
@@ -13,3 +14,8 @@ https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
 =======
 https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
 >>>>>>> novy projekt TCP komunikace
+=======
+https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
+
+aaa
+>>>>>>> aa
