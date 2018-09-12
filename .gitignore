@@ -99,4 +99,12 @@ ReactWithNodeJSMyTest/NodejsWebApp01/bin/
 ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/@mrmlnc/
 ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/
 ReactWithNodeJSMyTest/NodejsWebApp01/obj/
+<<<<<<< HEAD
 >>>>>>> pokus o react komponentu
+=======
+TcpPripojeni/.vs/TcpPripojeni/
+TcpPripojeni/Client/bin/
+TcpPripojeni/Client/obj/
+TcpPripojeni/Server/bin/
+TcpPripojeni/Server/obj/
+>>>>>>> novy projekt TCP komunikace

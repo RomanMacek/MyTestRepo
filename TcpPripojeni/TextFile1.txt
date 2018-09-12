@@ -1,7 +1,11 @@
 https://www.itnetwork.cz/csharp/pokrocile/csharp-tutorial-tcp-pripojeni-komunikace
 
 
+<<<<<<< HEAD
 https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
 
 aaa
 1111
+=======
+https://www.itnetwork.cz/csharp/pokrocile/c-sharp-tcp-ip-chat-po-siti
+>>>>>>> novy projekt TCP komunikace

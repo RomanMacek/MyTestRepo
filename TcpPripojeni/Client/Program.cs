@@ -15,8 +15,12 @@ namespace Client
             Console.WriteLine(" **** Klient **** ");
             //WaitCallback lCallback = new WaitCallback(Pokus_01);
             //ThreadPool.QueueUserWorkItem(lCallback, "Klient spusten");
+<<<<<<< HEAD
             // Pokus_TcpClient("Klient spusten");
             PikusServicePointManager();
+=======
+            Pokus_TcpClient("Klient spusten");
+>>>>>>> novy projekt TCP komunikace
             Console.ReadLine();
         }
 
@@ -76,6 +80,7 @@ namespace Client
             var message = Encoding.UTF8.GetString(buffer.Select<int, byte>(b => (byte)b).ToArray(), 0, buffer.Count);
             Console.WriteLine(message);
         }
+<<<<<<< HEAD
 
         private static void PikusServicePointManager()
         {
@@ -96,5 +101,7 @@ namespace Client
             var uri02Res = ServicePointManager.FindServicePoint(uri02);
         }
 
+=======
+>>>>>>> novy projekt TCP komunikace
     }
 }
