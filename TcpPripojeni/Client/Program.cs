@@ -17,6 +17,7 @@ namespace Client
             //ThreadPool.QueueUserWorkItem(lCallback, "Klient spusten");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // Pokus_TcpClient("Klient spusten");
             PikusServicePointManager();
 =======
@@ -25,6 +26,10 @@ namespace Client
 =======
             Pokus_TcpClient("Klient spusten");
 >>>>>>> novy projekt TCP komunikace
+=======
+            // Pokus_TcpClient("Klient spusten");
+            PikusServicePointManager();
+>>>>>>> Zkouška ServicePointManageru
             Console.ReadLine();
         }
 
@@ -86,6 +91,9 @@ namespace Client
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Zkouška ServicePointManageru
 
         private static void PikusServicePointManager()
         {
@@ -106,9 +114,12 @@ namespace Client
             var uri02Res = ServicePointManager.FindServicePoint(uri02);
         }
 
+<<<<<<< HEAD
 =======
 >>>>>>> novy projekt TCP komunikace
 =======
 >>>>>>> novy projekt TCP komunikace
+=======
+>>>>>>> Zkouška ServicePointManageru
     }
 }
