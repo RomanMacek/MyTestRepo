@@ -72,6 +72,7 @@ ReactWithNodeJSMyTest/packages/
 ReactWithNodeJSMyTest/WebApp_01/bin/
 ReactWithNodeJSMyTest/WebApp_01/obj/
 <<<<<<< HEAD
+<<<<<<< HEAD
 ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/
 TcpPripojeni/Server/obj/
 TcpPripojeni/Server/bin/
@@ -108,3 +109,11 @@ TcpPripojeni/Client/obj/
 TcpPripojeni/Server/bin/
 TcpPripojeni/Server/obj/
 >>>>>>> novy projekt TCP komunikace
+=======
+ReactWithNodeJS/MyTypeScriptConsole01/bin/
+ReactWithNodeJS/packages/
+ReactWithNodeJS/WebAppWithTypeScriptDleVidea/bin/
+ReactWithNodeJS/WebAppWithTypeScriptDleVidea/obj/
+ReactWithNodeJS/WebAppWithTypeScriptDleVideaFullFrwk/bin/
+ReactWithNodeJS/WebAppWithTypeScriptDleVideaFullFrwk/obj/
+>>>>>>> Pokusy s React (WebAppWithTypeScriptDleVideaFullFrwk  = funkcni)
