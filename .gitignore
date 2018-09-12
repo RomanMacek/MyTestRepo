@@ -73,6 +73,7 @@ ReactWithNodeJSMyTest/WebApp_01/bin/
 ReactWithNodeJSMyTest/WebApp_01/obj/
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/
 TcpPripojeni/Server/obj/
 TcpPripojeni/Server/bin/
@@ -94,12 +95,15 @@ SPAProjekt/.vs/config/applicationhost.config
 .gitignore_BASE_19056
 .gitignore_BACKUP_19056
 =======
+=======
+>>>>>>> pokus o react komponentu
 ReactWithNodeJS/WebAppWithTypeScript/obj/
 ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/.bin/
 ReactWithNodeJSMyTest/NodejsWebApp01/bin/
 ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/@mrmlnc/
 ReactWithNodeJSMyTest/NodejsWebApp01/node_modules/
 ReactWithNodeJSMyTest/NodejsWebApp01/obj/
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> pokus o react komponentu
 =======
@@ -117,3 +121,5 @@ ReactWithNodeJS/WebAppWithTypeScriptDleVidea/obj/
 ReactWithNodeJS/WebAppWithTypeScriptDleVideaFullFrwk/bin/
 ReactWithNodeJS/WebAppWithTypeScriptDleVideaFullFrwk/obj/
 >>>>>>> Pokusy s React (WebAppWithTypeScriptDleVideaFullFrwk  = funkcni)
+=======
+>>>>>>> pokus o react komponentu
