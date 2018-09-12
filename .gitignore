@@ -116,6 +116,7 @@ TcpPripojeni/Client/obj/
 TcpPripojeni/Server/bin/
 TcpPripojeni/Server/obj/
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> novy projekt TCP komunikace
 =======
 ReactWithNodeJS/MyTypeScriptConsole01/bin/
@@ -129,3 +130,12 @@ ReactWithNodeJS/WebAppWithTypeScriptDleVideaFullFrwk/obj/
 >>>>>>> pokus o react komponentu
 =======
 >>>>>>> novy projekt TCP komunikace
+=======
+SPAProjekt/OsobySPA_2.zip
+SPAProjekt/.vs/
+SPAProjekt/OsobySPA/bin/
+SPAProjekt/OsobySPA/fonts/
+SPAProjekt/OsobySPA/obj/
+SPAProjekt/packages/
+SPAProjekt/OsobySPA/App_Data/
+>>>>>>> gitignore
