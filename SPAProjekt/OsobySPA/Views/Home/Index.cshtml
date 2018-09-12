@@ -1,5 +1,13 @@
-﻿@section SPAViews {
+﻿
+<ul class="nav navbar-nav">
+    <li><a href="#" data-bind="click: navigateToHome">Home</a></li>
+    <li><a href="#" data-bind="click: navigateToOsoby">Osoby</a></li>
+    <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
+</ul>
+
+@section SPAViews {
     @Html.Partial("_Home")
+    @Html.Partial("_Osoby")
 }
 @section Scripts{
     @Scripts.Render("~/bundles/knockout")
